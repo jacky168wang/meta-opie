@@ -2,7 +2,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/LICENSE;md5=3f40d7994397109285ec7b81fdeb3
 
 IMAGE_LINGUAS = ""
 
-DEPENDS = "task-base task-opie"
+DEPENDS = "task-base task-opie task-opie-connman"
 
 IMAGE_FEATURES = "ssh-server-dropbear"
 
