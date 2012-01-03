@@ -1,6 +1,6 @@
 require ${PN}.inc
 PV = "${OPIE_GIT_PV}"
-PR = "r22"
+PR = "r23"
 
 SRC_URI = "${OPIE_GIT};protocol=git;subpath=core/apps/calibrate \
            ${OPIE_GIT};protocol=git;subpath=noncore/settings/mediummount \
@@ -12,9 +12,7 @@ SRC_URI = "${OPIE_GIT};protocol=git;subpath=core/apps/calibrate \
            file://nomax.patch;striplevel=3 \
            file://no-builtin-qss-startup-2.patch \
            file://kbdlocks-runtime.patch \
-           file://restart-from-bindir.patch \
            file://server-pro-git.patch \
-           file://firstuse-path.patch \
            file://force-firstuse-calibrate.patch \
           "
 
