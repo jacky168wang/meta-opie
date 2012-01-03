@@ -3,7 +3,7 @@ SECTION = "opie/base"
 LICENSE = "MIT"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-PR = "r16"
+PR = "r17"
 
 inherit task
 
@@ -16,6 +16,7 @@ PACKAGES = "task-opie-base \
             task-opie-base-decorations task-opie-base-inputmethods \
             task-opie-base-pim task-opie-base-settings \
             task-opie-base-styles task-opie-base-todayplugins \
+            task-opie-base-network-lite \
             task-opie-extra-settings \
             task-opie-extra-styles \
   ${@base_contains("COMBINED_FEATURES", "bluetooth", "task-opie-bluetooth", "",d)} \
@@ -63,17 +64,19 @@ RDEPENDS_task-opie-base-apps = "opie-console opie-clock opie-citytime opie-backu
                        opie-advancedfm opie-textedit"
 
 RDEPENDS_task-opie-base-settings = "opie-packagemanager opie-light-and-power opie-appearance \
-                           opie-systemtime opie-networksettings opie-button-settings \
+                           opie-systemtime opie-button-settings \
                            opie-icon-reload opie-launcher-settings opie-security \
                            opie-securityplugin-pin"
+
+RDEPENDS_task-opie-base-network-lite = "opie-networksettings \
+    ${@base_contains("DISTRO_FEATURES", "wifi", "opie-networksettings-wlanplugin", "",d)} \
+    ${@base_contains("DISTRO_FEATURES", "ppp", "opie-networksettings-pppplugin", "",d)} \
+                           "
 
 #
 # That settings can be removed and device will be still usable
 #
-RDEPENDS_task-opie-extra-settings = "opie-language opie-doctab opie-mediummount \
-    ${@base_contains("DISTRO_FEATURES", "wifi", "opie-networksettings-wlanplugin", "",d)} \
-    ${@base_contains("DISTRO_FEATURES", "ppp", "opie-networksettings-pppplugin", "",d)} \
-			    "
+RDEPENDS_task-opie-extra-settings = "opie-language opie-doctab opie-mediummount"
 
 RDEPENDS_task-opie-base-decorations = "opie-deco-flat opie-deco-liquid opie-deco-polished"
 

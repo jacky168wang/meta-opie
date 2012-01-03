@@ -15,6 +15,7 @@ RDEPENDS_${PN} = "task-opie-applets task-opie-apps task-opie-base \
             ${@base_contains("COMBINED_FEATURES", "irda", "task-opie-irda", "",d)} \
             task-opie-games task-opie-inputmethods \
             task-opie-multimedia task-opie-pim task-opie-settings \
-            task-opie-styles task-opie-todayplugins task-opie-wlan"
+            task-opie-styles task-opie-todayplugins task-opie-wlan \
+            task-opie-base-network-lite"
 
 inherit meta

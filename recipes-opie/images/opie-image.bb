@@ -11,7 +11,7 @@ IMAGE_INSTALL = "task-core-boot ${ROOTFS_PKGMANAGE} task-opie-base task-opie-bas
 		    task-opie-base-inputmethods task-opie-base-apps \
 		    task-opie-base-settings task-opie-base-decorations \
 		    task-opie-base-styles task-opie-base-pim \
-		    task-opie-extra-settings \
+		    task-opie-extra-settings task-opie-base-network-lite \
   ${@base_contains("COMBINED_FEATURES", "bluetooth", "task-opie-bluetooth", "",d)} \
   ${@base_contains("COMBINED_FEATURES", "irda", "task-opie-irda", "",d)} \
                     ${ANGSTROM_EXTRA_INSTALL} "

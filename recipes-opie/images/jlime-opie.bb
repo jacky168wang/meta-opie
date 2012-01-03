@@ -1,4 +1,3 @@
-PR = "r1"
 IMAGE_LINGUAS = ""
 
 DEPENDS = "task-base task-opie"
@@ -9,7 +8,7 @@ IMAGE_INSTALL = "task-base task-opie-base task-opie-base-applets \
 		    task-opie-base-inputmethods task-opie-base-apps \
 		    task-opie-base-settings task-opie-base-decorations \
 		    task-opie-base-styles task-opie-base-pim \
-		    task-opie-extra-settings \
+		    task-opie-extra-settings task-opie-base-network-lite \
 		    task-opie-bluetooth task-opie-irda \
 		    ${extra_stuff}"
 
